@@ -8,145 +8,303 @@
 </head>
 <body>
 
-  <!-- Navbar injected by nav.js -->
   <div id="navbar"></div>
 
-  <!-- ── HERO BANNER ── -->
-  <section class="hero">
-    <img src="images/main-banner.png" alt="ZeroStick — Modified Controllers" />
-  </section>
-
-  <!-- ── WHY ZEROSTICK ── -->
-  <section class="section">
-    <div class="container">
-      <p class="section-title">Why ZeroStick?</p>
-      <h2 class="section-heading">Built for Players Who Don't Settle</h2>
-      <div class="divider"></div>
-      <p class="section-sub">High-performance modified controllers built for speed, precision, and durability. Starting with genuine first-party controllers, our modifications give you the edge to outperform and outlast the competition.</p>
-      <a href="what-is-zerostick.html" class="btn btn-primary">Learn More</a>
+  <!-- ── HERO SLIDER ── -->
+  <section class="hero-slider">
+    <div class="hero-slide active">
+      <div class="img-placeholder" style="height:520px;background:#0a0a1a">[ Hero Banner — Slide 1 ]</div>
+      <div class="hero-content">
+        <h2>Built for Players Who Don't Settle</h2>
+        <p>Modified DualSense controllers starting from genuine first-party hardware — upgraded for speed, precision, and zero drift.</p>
+        <a href="ps5/index.html" class="btn btn-white">Shop Now</a>
+      </div>
+    </div>
+    <div class="hero-slide">
+      <div class="img-placeholder" style="height:520px;background:#0a1020">[ Hero Banner — Slide 2 ]</div>
+      <div class="hero-content">
+        <h2>Zero Drift. Zero Compromise.</h2>
+        <p>Hall-effect and upgraded stick mechanisms engineered to last — no more drift ruining your game.</p>
+        <a href="ps5/quick-picks.html" class="btn btn-white">Shop Quick Picks</a>
+      </div>
+    </div>
+    <div class="hero-slide">
+      <div class="img-placeholder" style="height:520px;background:#050520">[ Hero Banner — Slide 3 ]</div>
+      <div class="hero-content">
+        <h2>Design Your ZeroStick</h2>
+        <p>Choose every upgrade, color, and layout option. Build the controller you've always wanted.</p>
+        <a href="ps5/builder.html" class="btn btn-white">Build Now</a>
+      </div>
+    </div>
+    <div class="hero-dots">
+      <button class="hero-dot active" onclick="goSlide(0)"></button>
+      <button class="hero-dot" onclick="goSlide(1)"></button>
+      <button class="hero-dot" onclick="goSlide(2)"></button>
     </div>
   </section>
 
-  <!-- ── CHOOSE YOUR PATH ── -->
-  <section class="section section-dark">
+  <!-- ── DESIGN YOUR ZEROSTICK ── -->
+  <section class="section" style="padding-top:64px;padding-bottom:0">
     <div class="container">
-      <p class="section-title">Shop</p>
-      <h2 class="section-heading">Choose Your Path</h2>
-      <div class="divider"></div>
-      <div class="grid-3" style="margin-top:16px">
-
-        <div class="card">
-          <div class="badge">Fastest</div>
-          <h3 style="font-size:20px;font-weight:800;margin-bottom:8px">Quick Picks</h3>
-          <p style="color:var(--text-muted);font-size:14px;margin-bottom:20px">Pre-configured performance loadouts. Battle-tested builds, faster turnaround.</p>
-          <a href="ps5/quick-picks.html" class="btn btn-primary" style="width:100%;text-align:center">Shop Quick Picks</a>
-        </div>
-
-        <div class="card" style="border-color:var(--blue)">
-          <div class="badge" style="background:var(--accent)">Most Popular</div>
-          <h3 style="font-size:20px;font-weight:800;margin-bottom:8px">Pre-Built Controllers</h3>
-          <p style="color:var(--text-muted);font-size:14px;margin-bottom:20px">Ready to ship. Curated upgrades, no wait on builds. Just order and play.</p>
-          <a href="ps5/pre-built.html" class="btn btn-primary" style="width:100%;text-align:center">Shop Pre-Builts</a>
-        </div>
-
-        <div class="card">
-          <div class="badge" style="background:var(--dark3);border:1px solid var(--border)">Most Control</div>
-          <h3 style="font-size:20px;font-weight:800;margin-bottom:8px">Custom Builder</h3>
-          <p style="color:var(--text-muted);font-size:14px;margin-bottom:20px">Design every detail. Pick your upgrades, colors, and layout from scratch.</p>
-          <a href="ps5/builder.html" class="btn btn-outline" style="width:100%;text-align:center">Build Yours</a>
-        </div>
-
-      </div>
+      <span class="label label-blue">Shop</span>
+      <h2 class="heading-lg" style="margin-bottom:8px">Design Your ZeroStick</h2>
+      <p class="body-lg" style="max-width:560px;margin-bottom:40px">Choose your path — customise a controller from scratch, or grab a pre-configured build ready to ship.</p>
     </div>
   </section>
 
-  <!-- ── FEATURE HIGHLIGHTS ── -->
-  <section class="section">
-    <div class="container">
-      <p class="section-title">Features</p>
-      <h2 class="section-heading">What Makes a ZeroStick?</h2>
-      <div class="divider"></div>
-      <div class="grid-4" style="margin-top:8px">
-        <div class="card">
-          <div style="font-size:32px;margin-bottom:12px">🎮</div>
-          <h4 style="font-weight:700;margin-bottom:8px">Genuine Controllers</h4>
-          <p style="color:var(--text-muted);font-size:14px">We start with real first-party Sony controllers — no cheap knockoffs.</p>
-        </div>
-        <div class="card">
-          <div style="font-size:32px;margin-bottom:12px">⚡</div>
-          <h4 style="font-weight:700;margin-bottom:8px">Drift Resistant</h4>
-          <p style="color:var(--text-muted);font-size:14px">Hall-effect and upgraded thumbstick mechanisms that won't drift.</p>
-        </div>
-        <div class="card">
-          <div style="font-size:32px;margin-bottom:12px">🎯</div>
-          <h4 style="font-weight:700;margin-bottom:8px">Faster Inputs</h4>
-          <p style="color:var(--text-muted);font-size:14px">Mouse-click style triggers and bumpers for instant, consistent actuation.</p>
-        </div>
-        <div class="card">
-          <div style="font-size:32px;margin-bottom:12px">🔧</div>
-          <h4 style="font-weight:700;margin-bottom:8px">Rear Buttons</h4>
-          <p style="color:var(--text-muted);font-size:14px">Keep your thumbs on the sticks. Map any input to rear paddles.</p>
-        </div>
-      </div>
-      <div style="text-align:center;margin-top:40px">
-        <a href="what-is-zerostick.html" class="btn btn-outline">Explore All Features</a>
-      </div>
+  <div class="builder-grid" style="margin-top:0">
+    <div class="builder-card">
+      <div class="img-placeholder" style="aspect-ratio:4/3">[ PS5 DualSense image ]</div>
+      <span class="label">PlayStation 5</span>
+      <h3>Custom Builder</h3>
+      <p>Customize a DualSense controller with your choice of colors, components, and performance upgrades to create a controller tailored to your playstyle.</p>
+      <a href="ps5/builder.html" class="btn btn-dark" style="align-self:flex-start">Build Now</a>
     </div>
-  </section>
-
-  <!-- ── TESTIMONIALS ── -->
-  <section class="section section-dark">
-    <div class="container">
-      <p class="section-title">Customer Love</p>
-      <h2 class="section-heading">What Players Are Saying</h2>
-      <div class="divider"></div>
-      <div class="grid-3" style="margin-top:16px">
-        <div class="quote-block">
-          "Best controller I've ever used. The rear buttons completely changed how I play."
-          <cite>— [Customer Name], PS5 Custom</cite>
-        </div>
-        <div class="quote-block">
-          "Zero drift after 6 months of daily use. I'll never go back to stock."
-          <cite>— [Customer Name], Quick Pick Build</cite>
-        </div>
-        <div class="quote-block">
-          "Fast shipping, insane quality. Worth every penny."
-          <cite>— [Customer Name], Pre-Built</cite>
-        </div>
-      </div>
-      <div style="text-align:center;margin-top:48px">
-        <div class="stars">★★★★★</div>
-        <p style="font-size:28px;font-weight:800;margin:8px 0">4.9 / 5</p>
-        <p style="color:var(--text-muted)">Based on [X]+ verified reviews</p>
-      </div>
+    <div class="builder-card">
+      <div class="img-placeholder" style="aspect-ratio:4/3">[ Quick Picks image ]</div>
+      <span class="label">PlayStation 5</span>
+      <h3>Quick Picks</h3>
+      <p>Battle-tested configurations trusted by competitive players. Faster turnaround — still customisable in colors, vibration, and accessories.</p>
+      <a href="ps5/quick-picks.html" class="btn btn-dark" style="align-self:flex-start">Shop Quick Picks</a>
     </div>
-  </section>
+    <div class="builder-card">
+      <div class="img-placeholder" style="aspect-ratio:4/3">[ Pre-Built image ]</div>
+      <span class="label">PlayStation 5</span>
+      <h3>Pre-Built Controllers</h3>
+      <p>Ready-to-ship controllers featuring curated performance upgrades. Get the ZeroStick experience without building from scratch.</p>
+      <a href="ps5/pre-built.html" class="btn btn-dark" style="align-self:flex-start">Shop Pre-Builts</a>
+    </div>
+    <div class="builder-card">
+      <div class="img-placeholder" style="aspect-ratio:4/3">[ GameCube image ]</div>
+      <span class="label">GameCube</span>
+      <h3>Phob GameCube</h3>
+      <p>Genuine GameCube controllers upgraded with PhobGCC boards — hall-effect sensing, drift-free, calibration built in.</p>
+      <a href="extras/gamecube.html" class="btn btn-dark" style="align-self:flex-start">Shop GameCube</a>
+    </div>
+    <div class="builder-card">
+      <div class="img-placeholder" style="aspect-ratio:4/3">[ Switch Pro image ]</div>
+      <span class="label">Switch Pro</span>
+      <h3>Switch Pro</h3>
+      <p>Genuine Nintendo Switch Pro controllers with drift-resistant stick upgrades. Built for Smash and every competitive Switch title.</p>
+      <a href="extras/switch-pro.html" class="btn btn-dark" style="align-self:flex-start">Shop Switch Pro</a>
+    </div>
+    <div class="builder-card">
+      <div class="img-placeholder" style="aspect-ratio:4/3">[ Send-In image ]</div>
+      <span class="label">Services</span>
+      <h3>Controller Send-In</h3>
+      <p>Already have a controller? Send it in for professional repair, performance upgrades, or full modification.</p>
+      <a href="services/send-in.html" class="btn btn-dark" style="align-self:flex-start">Learn More</a>
+    </div>
+  </div>
 
-  <!-- ── TRUSTED BY ── -->
-  <section class="section">
+  <!-- ── WHAT IS A ZEROSTICK ── -->
+  <section class="section feature-section">
     <div class="container">
-      <p class="section-title">Community</p>
-      <h2 class="section-heading">Trusted by 1,000+ Gamers</h2>
-      <div class="divider"></div>
-      <div class="grid-2">
+      <span class="label">The Modifications</span>
+      <h2 class="heading-lg" style="margin-bottom:8px">What Is a ZeroStick?</h2>
+      <p class="body-lg" style="max-width:560px;margin-bottom:40px">Find out what turns a regular controller into a ZeroStick.</p>
+
+      <div class="feature-tabs">
+        <button class="feature-tab active" onclick="showFeature('smart-triggers')">Smart Triggers</button>
+        <button class="feature-tab" onclick="showFeature('smart-bumpers')">Smart Bumpers</button>
+        <button class="feature-tab" onclick="showFeature('drift-resist')">Drift-Resistant Sticks</button>
+        <button class="feature-tab" onclick="showFeature('rear-buttons')">Rear Buttons</button>
+        <button class="feature-tab" onclick="showFeature('face-buttons')">Smart Face Buttons</button>
+      </div>
+
+      <div id="smart-triggers" class="feature-panel active">
         <div>
-          <div class="card" style="margin-bottom:16px">
-            <h4 style="font-weight:700;margin-bottom:6px">Competitive FPS Players</h4>
-            <p style="color:var(--text-muted);font-size:14px">Built for COD, Apex, Warzone — every input optimised for fast-paced shooters.</p>
-          </div>
-          <div class="card">
-            <h4 style="font-weight:700;margin-bottom:6px">Everyday Gamers</h4>
-            <p style="color:var(--text-muted);font-size:14px">Whether you're ranked or relaxing, ZeroStick improves how every session feels.</p>
-          </div>
+          <h3 class="heading-md" style="margin-bottom:12px">Smart Triggers</h3>
+          <div class="divider"></div>
+          <p class="body-lg">Smart Triggers replace the standard analog trigger mechanism with a mouse-click style switch. This gives you a much shorter, crisper actuation point — your shots register the instant you pull, with no travel lag or analog variance.</p>
+          <ul style="margin-top:20px;display:flex;flex-direction:column;gap:10px;color:var(--text-muted);font-size:15px">
+            <li>✓ Instant actuation — no travel delay</li>
+            <li>✓ Consistent every press</li>
+            <li>✓ Compatible with all PS5 games</li>
+          </ul>
+          <a href="what-is-zerostick.html" class="btn btn-dark" style="margin-top:28px">Learn More</a>
         </div>
-        <div class="img-placeholder">[ Photo of controller / lifestyle shot ]</div>
+        <div class="img-placeholder" style="aspect-ratio:4/3">[ Smart Trigger image ]</div>
+      </div>
+      <div id="smart-bumpers" class="feature-panel">
+        <div>
+          <h3 class="heading-md" style="margin-bottom:12px">Smart Bumpers</h3>
+          <div class="divider"></div>
+          <p class="body-lg">Same mouse-click technology applied to your bumpers. Crisp, tactile, and lightning-fast. Never miss a perfect reload or ability activation again.</p>
+          <a href="what-is-zerostick.html" class="btn btn-dark" style="margin-top:28px">Learn More</a>
+        </div>
+        <div class="img-placeholder" style="aspect-ratio:4/3">[ Smart Bumper image ]</div>
+      </div>
+      <div id="drift-resist" class="feature-panel">
+        <div>
+          <h3 class="heading-md" style="margin-bottom:12px">Drift-Resistant Sticks</h3>
+          <div class="divider"></div>
+          <p class="body-lg">Upgraded thumbstick mechanisms engineered to resist the wear that causes drift. Our hall-effect option uses magnetic sensing with zero physical contact — virtually no drift, ever.</p>
+          <a href="what-is-zerostick.html" class="btn btn-dark" style="margin-top:28px">Learn More</a>
+        </div>
+        <div class="img-placeholder" style="aspect-ratio:4/3">[ Stick Mechanism image ]</div>
+      </div>
+      <div id="rear-buttons" class="feature-panel">
+        <div>
+          <h3 class="heading-md" style="margin-bottom:12px">Rear Buttons</h3>
+          <div class="divider"></div>
+          <p class="body-lg">Map any input to rear paddles and keep your thumbs on the sticks at all times. Remap on-the-fly without any app or software — directly on the controller.</p>
+          <a href="ps5/remap.html" class="btn btn-dark" style="margin-top:28px">Remap Guide</a>
+        </div>
+        <div class="img-placeholder" style="aspect-ratio:4/3">[ Rear Buttons image ]</div>
+      </div>
+      <div id="face-buttons" class="feature-panel">
+        <div>
+          <h3 class="heading-md" style="margin-bottom:12px">Smart Face Buttons</h3>
+          <div class="divider"></div>
+          <p class="body-lg">Every face button upgraded to mouse-click actuation. Cross, circle, square, triangle — all faster, all consistent, all the time.</p>
+          <a href="what-is-zerostick.html" class="btn btn-dark" style="margin-top:28px">Learn More</a>
+        </div>
+        <div class="img-placeholder" style="aspect-ratio:4/3">[ Face Buttons image ]</div>
       </div>
     </div>
   </section>
 
-  <!-- ── FOOTER ── -->
-  <footer id="footer"></footer>
+  <!-- ── PARTNERS TICKER ── -->
+  <div class="ticker-wrap">
+    <p class="ticker-label">— Official Partners —</p>
+    <div class="ticker">
+      <span>FaZe Clan</span><span>•</span>
+      <span>Team Liquid</span><span>•</span>
+      <span>100 Thieves</span><span>•</span>
+      <span>NRG</span><span>•</span>
+      <span>Sentinels</span><span>•</span>
+      <span>OpTic Gaming</span><span>•</span>
+      <span>Cloud9</span><span>•</span>
+      <span>TSM</span><span>•</span>
+      <!-- duplicate for seamless loop -->
+      <span>FaZe Clan</span><span>•</span>
+      <span>Team Liquid</span><span>•</span>
+      <span>100 Thieves</span><span>•</span>
+      <span>NRG</span><span>•</span>
+      <span>Sentinels</span><span>•</span>
+      <span>OpTic Gaming</span><span>•</span>
+      <span>Cloud9</span><span>•</span>
+      <span>TSM</span><span>•</span>
+    </div>
+  </div>
 
+  <!-- ── QUICK PICKS COMPARISON TABLE ── -->
+  <section class="section">
+    <div class="container">
+      <span class="label">Quick Picks</span>
+      <h2 class="heading-lg" style="margin-bottom:8px">What's the Difference?</h2>
+      <p class="body-lg" style="max-width:560px;margin-bottom:40px">Use the chart below to see what each of our Quick Picks offer.</p>
+      <div style="overflow-x:auto">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Super Stock<br><a href="ps5/quick-picks.html" class="view-btn" style="margin-top:8px;display:inline-block">View</a></th>
+              <th>FPS Build<br><a href="ps5/quick-picks.html" class="view-btn" style="margin-top:8px;display:inline-block">View</a></th>
+              <th>Smart Build<br><a href="ps5/quick-picks.html" class="view-btn" style="margin-top:8px;display:inline-block">View</a></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Description</td>
+              <td style="font-size:13px;color:var(--text-muted)">Drift-resistant sticks only. Best entry-level upgrade.</td>
+              <td style="font-size:13px;color:var(--text-muted)">Competitive FPS setup with Smart Triggers, Bumpers & Rear Buttons.</td>
+              <td style="font-size:13px;color:var(--text-muted)">Every input upgraded. The pinnacle of ZeroStick performance.</td>
+            </tr>
+            <tr><td>Drift-Resistant Sticks</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+            <tr><td>Smart Triggers</td><td><span class="dash">—</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+            <tr><td>Smart Bumpers</td><td><span class="dash">—</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+            <tr><td>Rear Buttons</td><td><span class="dash">—</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+            <tr><td>Smart Face Buttons</td><td><span class="dash">—</span></td><td><span class="dash">—</span></td><td><span class="check">✓</span></td></tr>
+            <tr><td>Smart D-Pad</td><td><span class="dash">—</span></td><td><span class="dash">—</span></td><td><span class="check">✓</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── REVIEWS ── -->
+  <section class="section section-gray">
+    <div class="container">
+      <span class="label">Customer Reviews</span>
+      <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:8px">
+        <h2 class="heading-lg">What Players Are Saying</h2>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:40px">
+        <span class="stars">★★★★★</span>
+        <span style="font-size:18px;font-weight:800">4.9</span>
+        <span style="color:var(--text-muted);font-size:14px">Based on [X]+ reviews</span>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-text">Best controller I've ever used.</div>
+          <p style="color:var(--text-muted);font-size:14px;margin:6px 0">The rear buttons completely changed how I play. Zero drift after months of daily use.</p>
+          <div class="review-author">— [Customer Name]</div>
+          <div class="review-date">1 week ago</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-text">Game changer.</div>
+          <p style="color:var(--text-muted);font-size:14px;margin:6px 0">Smart triggers make such a difference in FPS games. Worth every penny.</p>
+          <div class="review-author">— [Customer Name]</div>
+          <div class="review-date">2 weeks ago</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-text">10/10, no complaints.</div>
+          <p style="color:var(--text-muted);font-size:14px;margin:6px 0">Fast shipping, insane quality. I'll never go back to a stock controller.</p>
+          <div class="review-author">— [Customer Name]</div>
+          <div class="review-date">3 weeks ago</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-text">Amazing build quality.</div>
+          <p style="color:var(--text-muted);font-size:14px;margin:6px 0">Feels premium, responsive, and exactly what I needed for ranked. Highly recommend.</p>
+          <div class="review-author">— [Customer Name]</div>
+          <div class="review-date">1 month ago</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BOTTOM CTA BANNER ── -->
+  <section style="background:var(--black);padding:72px 0;text-align:center;color:#fff">
+    <div class="container">
+      <span class="label" style="color:rgba(255,255,255,0.4)">Get Started</span>
+      <h2 class="heading-lg" style="margin-bottom:16px">Ready to Build Yours?</h2>
+      <p style="color:rgba(255,255,255,0.6);font-size:17px;margin-bottom:36px;max-width:480px;margin-left:auto;margin-right:auto">Design every detail in the Custom Builder or grab a Quick Pick and start playing faster.</p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+        <a href="ps5/builder.html" class="btn btn-white">Custom Builder</a>
+        <a href="ps5/quick-picks.html" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.4)">Quick Picks</a>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer"></footer>
   <script src="nav.js"></script>
+  <script>
+    // Hero slider
+    let current = 0;
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.hero-dot');
+    function goSlide(n) {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = n;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+    }
+    setInterval(() => goSlide((current + 1) % slides.length), 5000);
+
+    // Feature tabs
+    function showFeature(id) {
+      document.querySelectorAll('.feature-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.feature-tab').forEach(t => t.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
 </body>
 </html>
