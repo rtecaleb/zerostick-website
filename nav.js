@@ -8,7 +8,7 @@
   </div>
   <nav id="navbar">
     <div class="container nav-inner">
-      <a class="nav-logo" href="/index.html"><img src="/images/logo.png" alt="ZeroStick" style="height:36px;width:auto;display:block" /></a>
+      <a class="nav-logo" href="/index.html"><img src="/images/logo.png" alt="ZeroStick" style="height:130px;width:auto;display:block" /></a>
       <ul class="nav-links">
 
         <li>
