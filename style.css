@@ -9,10 +9,10 @@
   --gray:       #525352;
   --gray-light: #f5f5f5;
   --gray-mid:   #e5e5e5;
-  --brand:      #2D8CE0;   /* ZeroStick main blue — used as the accent everywhere */
-  --brand-dark: #1f73bd;   /* darker shade for hovers */
-  --blue:       #2D8CE0;
-  --accent:     #2D8CE0;
+  --brand:      #298DDF;   /* ZeroStick main blue (from zerostickgaming.com) — accent everywhere */
+  --brand-dark: #1f74bd;   /* darker shade for hovers */
+  --blue:       #298DDF;
+  --accent:     #298DDF;
   --text:       #2a2b2a;
   --text-muted: #717271;
   --border:     #e0e0e0;
