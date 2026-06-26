@@ -143,4 +143,20 @@
 
   const footerEl = document.getElementById('footer');
   if (footerEl) footerEl.innerHTML = FOOTER_HTML;
+
+  // ── Universal scroll-reveal ──────────────────────────────
+  // Auto-applies the fade-up animation to major content blocks on
+  // every page, so we don't need a per-page script. Elements already
+  // tagged with .reveal (like the homepage) are picked up too.
+  const revealTargets = document.querySelectorAll(
+    '.section, .product-grid, .builder-grid, .page-header, .reveal'
+  );
+  revealTargets.forEach(el => el.classList.add('reveal'));
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  revealTargets.forEach(el => io.observe(el));
 })();
