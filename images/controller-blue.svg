@@ -1,0 +1,31 @@
+<svg viewBox="0 0 600 380" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="shBlue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4f7ff0"/>
+      <stop offset="1" stop-color="#1b4dd8"/>
+    </linearGradient>
+  </defs>
+  <!-- triggers tucked behind shell -->
+  <rect x="150" y="70" width="95" height="48" rx="24" fill="#15151f"/>
+  <rect x="355" y="70" width="95" height="48" rx="24" fill="#15151f"/>
+  <!-- shell -->
+  <path d="M300 95 C255 95 222 104 198 120 C175 112 150 110 128 116 C92 126 58 156 48 205 C40 248 46 300 78 322 C108 342 142 330 162 298 C180 272 210 258 300 258 C390 258 420 272 438 298 C458 330 492 342 522 322 C554 300 560 248 552 205 C542 156 508 126 472 116 C450 110 425 112 402 120 C378 104 345 95 300 95 Z" fill="url(#shBlue)" stroke="#00000022" stroke-width="2"/>
+  <!-- touchpad -->
+  <rect x="250" y="135" width="100" height="66" rx="12" fill="#ffffff26" stroke="#ffffff55"/>
+  <!-- d-pad -->
+  <g fill="#15151f">
+    <rect x="158" y="170" width="22" height="62" rx="5"/>
+    <rect x="138" y="190" width="62" height="22" rx="5"/>
+  </g>
+  <!-- left stick -->
+  <circle cx="238" cy="222" r="30" fill="#15151f"/>
+  <circle cx="238" cy="222" r="20" fill="#2a2a3a" stroke="#ffffff" stroke-width="3"/>
+  <!-- right stick -->
+  <circle cx="362" cy="222" r="30" fill="#15151f"/>
+  <circle cx="362" cy="222" r="20" fill="#2a2a3a" stroke="#ffffff" stroke-width="3"/>
+  <!-- face buttons -->
+  <circle cx="425" cy="160" r="13" fill="#ffffff"/>
+  <circle cx="455" cy="190" r="13" fill="#ffffff"/>
+  <circle cx="395" cy="190" r="13" fill="#ffffff"/>
+  <circle cx="425" cy="220" r="13" fill="#ffffff"/>
+</svg>
