@@ -27,12 +27,12 @@ ul { list-style: none; }
 /* ── Buttons ── */
 .btn {
   display: inline-block;
-  padding: 13px 32px;
-  border-radius: 2px;
+  padding: 14px 34px;
+  border-radius: 28px;            /* pill shape, like Battle Beaver */
   font-weight: 700;
-  font-size: 13px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  text-transform: none;
   cursor: pointer;
   transition: all 0.2s;
   border: none;
@@ -48,7 +48,7 @@ ul { list-style: none; }
 .btn-white:hover { background: #f0f0f0; }
 
 /* ── Layout ── */
-.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.container { max-width: 1500px; margin: 0 auto; padding: 0 32px; }
 .section { padding: 72px 0; }
 .section-gray { background: var(--gray-light); }
 .section-dark { background: var(--black); color: #fff; }
@@ -61,9 +61,9 @@ ul { list-style: none; }
 }
 .label-blue { color: var(--blue); }
 h1,h2,h3,h4 { line-height: 1.15; }
-.heading-xl { font-size: clamp(36px, 5vw, 64px); font-weight: 800; }
-.heading-lg { font-size: clamp(28px, 4vw, 48px); font-weight: 800; }
-.heading-md { font-size: clamp(22px, 3vw, 32px); font-weight: 700; }
+.heading-xl { font-size: clamp(40px, 5vw, 64px); font-weight: 800; text-transform: uppercase; letter-spacing: -0.01em; }
+.heading-lg { font-size: clamp(32px, 4vw, 56px); font-weight: 800; text-transform: uppercase; letter-spacing: -0.01em; }
+.heading-md { font-size: clamp(24px, 3vw, 36px); font-weight: 700; }
 .body-lg { font-size: 17px; color: var(--text-muted); line-height: 1.7; }
 
 /* ── Site Header (two-row dark navbar matching Battle Beaver) ── */
@@ -77,7 +77,7 @@ h1,h2,h3,h4 { line-height: 1.15; }
 /* TOP ROW */
 .nav-top { background: #0d1117; border-bottom: 1px solid rgba(255,255,255,0.07); }
 .nav-top-inner {
-  max-width: 1400px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 0 24px;
   display: flex;
@@ -134,7 +134,7 @@ h1,h2,h3,h4 { line-height: 1.15; }
 /* BOTTOM ROW */
 .nav-bottom { background: #161b22; border-bottom: 1px solid rgba(255,255,255,0.06); }
 .nav-bottom-inner {
-  max-width: 1400px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 0 24px;
   display: flex;
@@ -224,14 +224,14 @@ h1,h2,h3,h4 { line-height: 1.15; }
 .btn-support:hover { background: #0090E0; color: #0d1117 !important; }
 
 /* ── Hero Slider (crossfade) ── */
-.hero-slider { position: relative; overflow: hidden; background: #111; height: 520px; }
+.hero-slider { position: relative; overflow: hidden; background: #111; height: 680px; }
 .hero-slide {
   position: absolute; inset: 0;
   opacity: 0; visibility: hidden;
   transition: opacity 1s ease;
 }
 .hero-slide.active { opacity: 1; visibility: visible; z-index: 1; }
-.hero-slide img { width: 100%; height: 520px; object-fit: cover; animation: kenburns 8s ease-out both; }
+.hero-slide img { width: 100%; height: 680px; object-fit: cover; animation: kenburns 8s ease-out both; }
 .hero-slide.active img { animation: kenburns 8s ease-out both; }
 @keyframes kenburns { from { transform: scale(1.08); } to { transform: scale(1); } }
 .hero-slide .img-placeholder { width: 100%; height: 520px; background: #1a1a2e; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 18px; font-weight: 700; }
