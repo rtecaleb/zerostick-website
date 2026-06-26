@@ -5,6 +5,11 @@
   const NAV_HTML = `
   <header class="site-header">
 
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="announce-bar">
+      FREE SHIPPING ON ORDERS OVER $100 &nbsp;|&nbsp; USE CODE <strong>ZEROSTICK10</strong> FOR 10% OFF
+    </div>
+
     <!-- TOP ROW: Logo | Search | Account + Cart -->
     <div class="nav-top">
       <div class="nav-top-inner">
