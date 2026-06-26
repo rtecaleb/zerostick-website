@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Controller Designer — ZeroStick</title>
   <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* 3D stage */
+    .stage3d { width: 100%; height: 460px; border-radius: 12px; cursor: grab;
+      background: radial-gradient(circle at 50% 40%, #20262f 0%, #0d1117 70%); }
+    .stage3d:active { cursor: grabbing; }
+    .stage-hint { text-align:center; color:var(--text-muted); font-size:12px; margin-top:12px; }
+  </style>
 </head>
 <body>
   <div id="navbar"></div>
@@ -13,7 +20,7 @@
     <div class="container">
       <span class="label">PS5 · Custom Builder</span>
       <h1>Controller Designer</h1>
-      <p>Configure every upgrade, color, and layout option. The preview and price update live as you build.</p>
+      <p>Spin the controller to view it from any angle. Colors and price update live as you build.</p>
     </div>
   </div>
 
@@ -21,53 +28,19 @@
     <div class="container">
       <div class="builder-layout">
 
-        <!-- ════ LEFT: LIVE PREVIEW ════ -->
+        <!-- LEFT: 3D PREVIEW -->
         <div class="builder-preview">
-          <div class="preview-stage">
-            <!-- Inline SVG so JavaScript can recolor each part live -->
-            <svg id="ctrl" viewBox="0 0 600 380" xmlns="http://www.w3.org/2000/svg">
-              <!-- bumpers -->
-              <rect class="bumper" x="160" y="56" width="80" height="22" rx="11" fill="#15151f"/>
-              <rect class="bumper" x="360" y="56" width="80" height="22" rx="11" fill="#15151f"/>
-              <!-- triggers -->
-              <rect class="trigger" x="150" y="72" width="95" height="46" rx="23" fill="#15151f"/>
-              <rect class="trigger" x="355" y="72" width="95" height="46" rx="23" fill="#15151f"/>
-              <!-- rear paddles (revealed when rear buttons selected) -->
-              <rect class="rear-paddle" x="118" y="298" width="58" height="15" rx="7" fill="#00A8FF" opacity="0"/>
-              <rect class="rear-paddle" x="424" y="298" width="58" height="15" rx="7" fill="#00A8FF" opacity="0"/>
-              <!-- shell -->
-              <path id="shell" d="M300 95 C255 95 222 104 198 120 C175 112 150 110 128 116 C92 126 58 156 48 205 C40 248 46 300 78 322 C108 342 142 330 162 298 C180 272 210 258 300 258 C390 258 420 272 438 298 C458 330 492 342 522 322 C554 300 560 248 552 205 C542 156 508 126 472 116 C450 110 425 112 402 120 C378 104 345 95 300 95 Z" fill="#1b4dd8" stroke="#00000022" stroke-width="2"/>
-              <!-- touchpad -->
-              <rect id="touchpad" x="250" y="135" width="100" height="66" rx="12" fill="#ffffff26" stroke="#ffffff55"/>
-              <!-- d-pad -->
-              <g id="dpad" fill="#15151f">
-                <rect x="158" y="170" width="22" height="62" rx="5"/>
-                <rect x="138" y="190" width="62" height="22" rx="5"/>
-              </g>
-              <!-- left stick -->
-              <circle cx="238" cy="222" r="30" fill="#15151f"/>
-              <circle class="stick-ring" cx="238" cy="222" r="20" fill="#2a2a3a" stroke="#ffffff" stroke-width="3"/>
-              <!-- right stick -->
-              <circle cx="362" cy="222" r="30" fill="#15151f"/>
-              <circle class="stick-ring" cx="362" cy="222" r="20" fill="#2a2a3a" stroke="#ffffff" stroke-width="3"/>
-              <!-- face buttons -->
-              <circle class="face-btn" cx="425" cy="160" r="13" fill="#ffffff"/>
-              <circle class="face-btn" cx="455" cy="190" r="13" fill="#ffffff"/>
-              <circle class="face-btn" cx="395" cy="190" r="13" fill="#ffffff"/>
-              <circle class="face-btn" cx="425" cy="220" r="13" fill="#ffffff"/>
-            </svg>
-          </div>
-          <p class="preview-note">3D-style preview · final product may vary slightly</p>
+          <div id="stage3d" class="stage3d"></div>
+          <p class="stage-hint">Drag to rotate · scroll to zoom</p>
         </div>
 
-        <!-- ════ RIGHT: OPTIONS ════ -->
+        <!-- RIGHT: OPTIONS -->
         <div class="builder-options">
 
-          <!-- SHELL COLOR -->
           <div class="opt-group">
             <h3 class="opt-title">Shell Color</h3>
             <div class="swatches" id="shellSwatches">
-              <button class="swatch active" style="background:#1b4dd8" data-color="#1b4dd8" title="Blue"></button>
+              <button class="swatch active" style="background:#298DDF" data-color="#298DDF" title="ZeroStick Blue"></button>
               <button class="swatch" style="background:#1a1a24" data-color="#1a1a24" title="Black"></button>
               <button class="swatch" style="background:#e8e8ee" data-color="#e8e8ee" title="White"></button>
               <button class="swatch" style="background:#6a2bd0" data-color="#6a2bd0" title="Purple"></button>
@@ -76,109 +49,54 @@
             </div>
           </div>
 
-          <!-- BUTTON COLOR -->
           <div class="opt-group">
             <h3 class="opt-title">Face Button Color</h3>
             <div class="swatches" id="btnSwatches">
               <button class="swatch active" style="background:#ffffff" data-color="#ffffff" title="White"></button>
               <button class="swatch" style="background:#15151f" data-color="#15151f" title="Black"></button>
-              <button class="swatch" style="background:#00A8FF" data-color="#00A8FF" title="Sky Blue"></button>
+              <button class="swatch" style="background:#298DDF" data-color="#298DDF" title="Blue"></button>
               <button class="swatch" style="background:#ffce3a" data-color="#ffce3a" title="Gold"></button>
               <button class="swatch" style="background:#ff4d6d" data-color="#ff4d6d" title="Pink"></button>
             </div>
           </div>
 
-          <!-- STICK ACCENT COLOR -->
           <div class="opt-group">
             <h3 class="opt-title">Stick Accent Ring</h3>
             <div class="swatches" id="stickSwatches">
-              <button class="swatch active" style="background:#ffffff" data-color="#ffffff" title="White"></button>
-              <button class="swatch" style="background:#1b4dd8" data-color="#1b4dd8" title="Blue"></button>
-              <button class="swatch" style="background:#00A8FF" data-color="#00A8FF" title="Sky Blue"></button>
+              <button class="swatch active" style="background:#298DDF" data-color="#298DDF" title="Blue"></button>
+              <button class="swatch" style="background:#ffffff" data-color="#ffffff" title="White"></button>
+              <button class="swatch" style="background:#00e5a0" data-color="#00e5a0" title="Mint"></button>
               <button class="swatch" style="background:#ff4d6d" data-color="#ff4d6d" title="Pink"></button>
             </div>
           </div>
 
-          <!-- STICK MECHANISM -->
           <div class="opt-group">
             <h3 class="opt-title">Thumbstick Mechanism</h3>
-            <label class="opt-row">
-              <span><input type="radio" name="stickType" value="0" checked> Standard <span class="opt-desc">First-party sticks</span></span>
-              <span class="opt-price">Included</span>
-            </label>
-            <label class="opt-row">
-              <span><input type="radio" name="stickType" value="25"> Drift-Resistant <span class="opt-desc">Reinforced anti-drift sticks</span></span>
-              <span class="opt-price">+$25</span>
-            </label>
-            <label class="opt-row">
-              <span><input type="radio" name="stickType" value="45"> Hall-Effect <span class="opt-desc">Magnetic — virtually zero drift</span></span>
-              <span class="opt-price">+$45</span>
-            </label>
+            <label class="opt-row"><span><input type="radio" name="stickType" value="0" checked> Standard <span class="opt-desc">First-party sticks</span></span><span class="opt-price">Included</span></label>
+            <label class="opt-row"><span><input type="radio" name="stickType" value="25"> Drift-Resistant <span class="opt-desc">Reinforced anti-drift sticks</span></span><span class="opt-price">+$25</span></label>
+            <label class="opt-row"><span><input type="radio" name="stickType" value="45"> TMR / Hall-Effect <span class="opt-desc">Magnetic — virtually zero drift</span></span><span class="opt-price">+$45</span></label>
           </div>
 
-          <!-- SMART BUTTONS -->
           <div class="opt-group">
             <h3 class="opt-title">Smart Buttons (Mouse-Click)</h3>
-            <label class="opt-row">
-              <span><input type="checkbox" class="smart" id="optTriggers" value="30"> Smart Triggers</span>
-              <span class="opt-price">+$30</span>
-            </label>
-            <label class="opt-row">
-              <span><input type="checkbox" class="smart" id="optBumpers" value="25"> Smart Bumpers</span>
-              <span class="opt-price">+$25</span>
-            </label>
-            <label class="opt-row">
-              <span><input type="checkbox" class="smart" id="optFace" value="30"> Smart Face Buttons</span>
-              <span class="opt-price">+$30</span>
-            </label>
-            <label class="opt-row">
-              <span><input type="checkbox" class="smart" id="optDpad" value="20"> Smart D-Pad</span>
-              <span class="opt-price">+$20</span>
-            </label>
+            <label class="opt-row"><span><input type="checkbox" class="smart" id="optTriggers" value="30"> Smart Triggers</span><span class="opt-price">+$30</span></label>
+            <label class="opt-row"><span><input type="checkbox" class="smart" id="optBumpers" value="25"> Smart Bumpers</span><span class="opt-price">+$25</span></label>
+            <label class="opt-row"><span><input type="checkbox" class="smart" id="optFace" value="30"> Smart Face Buttons</span><span class="opt-price">+$30</span></label>
+            <label class="opt-row"><span><input type="checkbox" class="smart" id="optDpad" value="20"> Smart D-Pad</span><span class="opt-price">+$20</span></label>
           </div>
 
-          <!-- REAR BUTTONS -->
           <div class="opt-group">
             <h3 class="opt-title">Rear Buttons</h3>
-            <label class="opt-row">
-              <span><input type="radio" name="rear" value="0" checked> None</span>
-              <span class="opt-price">Included</span>
-            </label>
-            <label class="opt-row">
-              <span><input type="radio" name="rear" value="35"> 2 Rear Paddles</span>
-              <span class="opt-price">+$35</span>
-            </label>
-            <label class="opt-row">
-              <span><input type="radio" name="rear" value="55"> 4 Rear Paddles</span>
-              <span class="opt-price">+$55</span>
-            </label>
+            <label class="opt-row"><span><input type="radio" name="rear" value="0" checked> None</span><span class="opt-price">Included</span></label>
+            <label class="opt-row"><span><input type="radio" name="rear" value="35"> 2 Rear Paddles</span><span class="opt-price">+$35</span></label>
+            <label class="opt-row"><span><input type="radio" name="rear" value="55"> 4 Rear Paddles</span><span class="opt-price">+$55</span></label>
           </div>
 
-          <!-- VIBRATION -->
-          <div class="opt-group">
-            <h3 class="opt-title">Vibration</h3>
-            <label class="opt-row">
-              <span><input type="radio" name="vib" value="0" checked> Standard</span>
-              <span class="opt-price">Included</span>
-            </label>
-            <label class="opt-row">
-              <span><input type="radio" name="vib" value="0"> Reduced (lighter weight)</span>
-              <span class="opt-price">Included</span>
-            </label>
-          </div>
-
-          <!-- PRICE + ADD TO CART -->
           <div class="build-summary">
-            <div class="summary-row">
-              <span>Base Controller</span>
-              <span>$99</span>
-            </div>
-            <div class="summary-row summary-total">
-              <span>Total</span>
-              <span id="totalPrice">$99</span>
-            </div>
-            <button class="btn btn-dark" style="width:100%;margin-top:16px" onclick="addToCart()">Add to Cart</button>
-            <p class="summary-note">Builds ship in 5–7 business days · 1-year warranty</p>
+            <div class="summary-row"><span>Base Controller</span><span>$99</span></div>
+            <div class="summary-row summary-total"><span>Total</span><span id="totalPrice">$99</span></div>
+            <button class="btn btn-dark" style="width:100%;margin-top:16px" id="addBtn">Add to Cart</button>
+            <p class="summary-note">Builds ship in 5–7 business days · 5-year stick warranty</p>
           </div>
 
         </div>
@@ -188,68 +106,159 @@
 
   <footer id="footer"></footer>
   <script src="../nav.js"></script>
-  <script>
-    // ── Live recolor + price engine ──────────────────────────
-    const ctrl = document.getElementById('ctrl');
-    const shell = document.getElementById('shell');
-    const stickRings = ctrl.querySelectorAll('.stick-ring');
-    const faceBtns = ctrl.querySelectorAll('.face-btn');
-    const triggers = ctrl.querySelectorAll('.trigger');
-    const bumpers = ctrl.querySelectorAll('.bumper');
-    const dpad = document.getElementById('dpad');
-    const rearPaddles = ctrl.querySelectorAll('.rear-paddle');
-    const ACCENT = '#00A8FF';   // highlight color for active smart parts
-    const DARK = '#15151f';
 
-    // Helper: make one swatch group recolor a target
-    function wireSwatches(containerId, apply) {
-      const box = document.getElementById(containerId);
-      box.querySelectorAll('.swatch').forEach(sw => {
-        sw.addEventListener('click', () => {
-          box.querySelectorAll('.swatch').forEach(s => s.classList.remove('active'));
-          sw.classList.add('active');
-          apply(sw.dataset.color);
-        });
-      });
+  <!-- ── Three.js 3D builder (original implementation) ── -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
     }
+  }
+  </script>
+  <script type="module">
+    import * as THREE from 'three';
+    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+    import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
 
-    wireSwatches('shellSwatches', c => shell.setAttribute('fill', c));
-    wireSwatches('btnSwatches',  c => faceBtns.forEach(b => b.setAttribute('fill', c)));
-    wireSwatches('stickSwatches', c => stickRings.forEach(r => r.setAttribute('stroke', c)));
+    const ACCENT = '#298DDF';
+    const DARK = '#15151f';
+    const stage = document.getElementById('stage3d');
 
-    // Smart button toggles — highlight matching part in the preview
-    document.getElementById('optTriggers').addEventListener('change', e =>
-      triggers.forEach(t => t.setAttribute('fill', e.target.checked ? ACCENT : DARK)));
-    document.getElementById('optBumpers').addEventListener('change', e =>
-      bumpers.forEach(b => b.setAttribute('fill', e.target.checked ? ACCENT : DARK)));
-    document.getElementById('optDpad').addEventListener('change', e =>
-      dpad.setAttribute('fill', e.target.checked ? ACCENT : DARK));
+    // ── Scene / camera / renderer ──
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(38, stage.clientWidth / stage.clientHeight, 0.1, 100);
+    camera.position.set(0, 0.4, 6.4);
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setSize(stage.clientWidth, stage.clientHeight);
+    stage.appendChild(renderer.domElement);
 
-    // Rear buttons — reveal paddles for 2 or 4
-    document.querySelectorAll('input[name="rear"]').forEach(r => {
-      r.addEventListener('change', () => {
-        const v = +document.querySelector('input[name="rear"]:checked').value;
-        rearPaddles.forEach(p => p.setAttribute('opacity', v > 0 ? 1 : 0));
-      });
-    });
+    // ── Lighting ──
+    scene.add(new THREE.HemisphereLight(0xffffff, 0x223044, 0.9));
+    const key = new THREE.DirectionalLight(0xffffff, 1.6); key.position.set(3, 5, 4); scene.add(key);
+    const fill = new THREE.DirectionalLight(0xbcd4ff, 0.6); fill.position.set(-4, 1, 2); scene.add(fill);
+    const rim = new THREE.PointLight(0x88bbff, 0.7); rim.position.set(0, 2, -5); scene.add(rim);
 
-    // ── Price calculation ──
+    // ── Controls ──
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.08;
+    controls.minDistance = 4.5; controls.maxDistance = 10;
+    controls.autoRotate = true; controls.autoRotateSpeed = 1.2;
+    controls.target.set(0, -0.1, 0);
+    stage.addEventListener('pointerdown', () => controls.autoRotate = false);
+
+    // ── Materials ──
+    const shellMat  = new THREE.MeshStandardMaterial({ color: ACCENT, roughness: 0.45, metalness: 0.15 });
+    const faceMat   = new THREE.MeshStandardMaterial({ color: '#ffffff', roughness: 0.4 });
+    const ringMat   = new THREE.MeshStandardMaterial({ color: ACCENT, roughness: 0.35, emissive: ACCENT, emissiveIntensity: 0.25 });
+    const darkMat   = new THREE.MeshStandardMaterial({ color: DARK, roughness: 0.6 });
+    const triggerMat= new THREE.MeshStandardMaterial({ color: DARK, roughness: 0.6 });
+    const bumperMat = new THREE.MeshStandardMaterial({ color: DARK, roughness: 0.6 });
+    const dpadMat   = new THREE.MeshStandardMaterial({ color: DARK, roughness: 0.6 });
+    const padMat    = new THREE.MeshStandardMaterial({ color: '#dfe6ee', roughness: 0.3, metalness: 0.1, transparent: true, opacity: 0.5 });
+
+    const pad = new THREE.Group();
+    scene.add(pad);
+    const add = (geo, mat, x, y, z, rx=0, ry=0, rz=0) => {
+      const m = new THREE.Mesh(geo, mat); m.position.set(x, y, z); m.rotation.set(rx, ry, rz); pad.add(m); return m;
+    };
+
+    // Body
+    add(new RoundedBoxGeometry(3.1, 1.25, 0.62, 6, 0.26), shellMat, 0, 0, 0);
+    // Grips (capsules angled out/down)
+    add(new THREE.CapsuleGeometry(0.42, 1.0, 8, 16), shellMat, -1.18, -0.78, 0.02, 0.25, 0, 0.5);
+    add(new THREE.CapsuleGeometry(0.42, 1.0, 8, 16), shellMat,  1.18, -0.78, 0.02, 0.25, 0, -0.5);
+
+    // Touchpad
+    add(new RoundedBoxGeometry(0.95, 0.6, 0.08, 4, 0.05), padMat, 0, 0.18, 0.31);
+
+    // D-pad (left)
+    add(new RoundedBoxGeometry(0.16, 0.5, 0.12, 3, 0.04), dpadMat, -1.0, 0.05, 0.30);
+    add(new RoundedBoxGeometry(0.5, 0.16, 0.12, 3, 0.04), dpadMat, -1.0, 0.05, 0.30);
+
+    // Face buttons (right, diamond)
+    const faceGeo = new THREE.CylinderGeometry(0.13, 0.13, 0.12, 24);
+    const fb = (x,y)=>add(faceGeo, faceMat, x, y, 0.30, Math.PI/2, 0, 0);
+    fb(1.0, 0.32); fb(1.3, 0.02); fb(0.7, 0.02); fb(1.0, -0.28);
+
+    // Thumbsticks
+    function stick(cx, cy) {
+      add(new THREE.CylinderGeometry(0.27, 0.30, 0.12, 28), darkMat, cx, cy, 0.30, Math.PI/2, 0, 0); // base
+      add(new THREE.TorusGeometry(0.20, 0.045, 12, 28), ringMat, cx, cy, 0.40);                       // accent ring
+      add(new THREE.SphereGeometry(0.19, 24, 16), darkMat, cx, cy, 0.40);                             // cap
+    }
+    stick(-0.55, -0.18);
+    stick(0.55, -0.18);
+
+    // Bumpers + triggers (top back edge)
+    const bumperL = add(new RoundedBoxGeometry(0.7, 0.18, 0.3, 3, 0.06), bumperMat, -0.95, 0.66, -0.12);
+    const bumperR = add(new RoundedBoxGeometry(0.7, 0.18, 0.3, 3, 0.06), bumperMat,  0.95, 0.66, -0.12);
+    const triggerL = add(new RoundedBoxGeometry(0.7, 0.34, 0.3, 3, 0.08), triggerMat, -0.95, 0.5, -0.32, -0.5, 0, 0);
+    const triggerR = add(new RoundedBoxGeometry(0.7, 0.34, 0.3, 3, 0.08), triggerMat,  0.95, 0.5, -0.32, -0.5, 0, 0);
+
+    // Rear paddles (hidden until selected)
+    const paddleMat = new THREE.MeshStandardMaterial({ color: ACCENT, roughness: 0.4 });
+    const paddleL = add(new RoundedBoxGeometry(0.5, 0.14, 0.1, 3, 0.04), paddleMat, -0.7, -0.55, -0.4, 0.3, 0, 0);
+    const paddleR = add(new RoundedBoxGeometry(0.5, 0.14, 0.1, 3, 0.04), paddleMat,  0.7, -0.55, -0.4, 0.3, 0, 0);
+    paddleL.visible = paddleR.visible = false;
+
+    pad.rotation.x = -0.15;
+
+    // ── Render loop ──
+    function animate() {
+      requestAnimationFrame(animate);
+      controls.update();
+      renderer.render(scene, camera);
+    }
+    animate();
+
+    // ── Responsive ──
+    function resize() {
+      const w = stage.clientWidth, h = stage.clientHeight;
+      camera.aspect = w / h; camera.updateProjectionMatrix();
+      renderer.setSize(w, h);
+    }
+    window.addEventListener('resize', resize);
+
+    // ── Wire swatches ──
+    function wire(id, apply) {
+      const box = document.getElementById(id);
+      box.querySelectorAll('.swatch').forEach(sw => sw.addEventListener('click', () => {
+        box.querySelectorAll('.swatch').forEach(s => s.classList.remove('active'));
+        sw.classList.add('active'); apply(sw.dataset.color);
+      }));
+    }
+    wire('shellSwatches', c => shellMat.color.set(c));
+    wire('btnSwatches',  c => faceMat.color.set(c));
+    wire('stickSwatches', c => { ringMat.color.set(c); ringMat.emissive.set(c); paddleMat.color.set(c); });
+
+    // ── Smart toggles highlight 3D parts ──
+    const setMat = (mat, on) => mat.color.set(on ? ACCENT : DARK);
+    document.getElementById('optTriggers').addEventListener('change', e => setMat(triggerMat, e.target.checked));
+    document.getElementById('optBumpers').addEventListener('change', e => setMat(bumperMat, e.target.checked));
+    document.getElementById('optDpad').addEventListener('change', e => setMat(dpadMat, e.target.checked));
+    document.querySelectorAll('input[name="rear"]').forEach(r => r.addEventListener('change', () => {
+      const v = +document.querySelector('input[name="rear"]:checked').value;
+      paddleL.visible = v > 0; paddleR.visible = v > 0;
+    }));
+
+    // ── Price ──
     const BASE = 99;
     function recalc() {
-      let total = BASE;
-      total += +document.querySelector('input[name="stickType"]:checked').value;
-      total += +document.querySelector('input[name="rear"]:checked').value;
-      document.querySelectorAll('.smart:checked').forEach(c => total += +c.value);
-      document.getElementById('totalPrice').textContent = '$' + total;
+      let t = BASE;
+      t += +document.querySelector('input[name="stickType"]:checked').value;
+      t += +document.querySelector('input[name="rear"]:checked').value;
+      document.querySelectorAll('.smart:checked').forEach(c => t += +c.value);
+      document.getElementById('totalPrice').textContent = '$' + t;
     }
-    // Recalc whenever any option changes
     document.querySelectorAll('input').forEach(i => i.addEventListener('change', recalc));
     recalc();
 
-    function addToCart() {
-      const price = document.getElementById('totalPrice').textContent;
-      alert('Your custom ZeroStick (' + price + ') has been added to the cart!\n\n(Checkout is a demo — wiring up real cart next.)');
-    }
+    document.getElementById('addBtn').addEventListener('click', () => {
+      alert('Your custom ZeroStick (' + document.getElementById('totalPrice').textContent + ') has been added to the cart!\n\n(Checkout is a demo for now.)');
+    });
   </script>
 </body>
 </html>
