@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart — ZeroStick</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <div class="page-header">
+    <div class="container">
+      <span class="label">Checkout</span>
+      <h1>Your Cart</h1>
+      <p>Review your items before checking out.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container" style="max-width:900px">
+
+      <!-- Empty state (shown when cart has no items) -->
+      <div style="text-align:center;padding:60px 24px;border:1px solid var(--border);border-radius:12px;background:var(--gray-light)">
+        <div style="font-size:56px;margin-bottom:20px">🛒</div>
+        <h2 class="heading-md" style="margin-bottom:10px">Your Cart Is Empty</h2>
+        <p style="color:var(--text-muted);margin-bottom:28px;max-width:420px;margin-left:auto;margin-right:auto">Looks like you haven't added anything yet. Build a controller or grab a Quick Pick to get started.</p>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+          <a href="ps5/builder.html" class="btn btn-dark">Custom Builder</a>
+          <a href="ps5/quick-picks.html" class="btn btn-outline">Quick Picks</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer id="footer"></footer>
+  <script src="nav.js"></script>
+</body>
+</html>
