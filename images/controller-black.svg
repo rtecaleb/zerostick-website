@@ -14,11 +14,11 @@
     <rect x="138" y="190" width="62" height="22" rx="5"/>
   </g>
   <circle cx="238" cy="222" r="30" fill="#0c0c12"/>
-  <circle cx="238" cy="222" r="20" fill="#26262f" stroke="#00e5a0" stroke-width="3"/>
+  <circle cx="238" cy="222" r="20" fill="#26262f" stroke="#00A8FF" stroke-width="3"/>
   <circle cx="362" cy="222" r="30" fill="#0c0c12"/>
-  <circle cx="362" cy="222" r="20" fill="#26262f" stroke="#00e5a0" stroke-width="3"/>
-  <circle cx="425" cy="160" r="13" fill="#00e5a0"/>
-  <circle cx="455" cy="190" r="13" fill="#00e5a0"/>
-  <circle cx="395" cy="190" r="13" fill="#00e5a0"/>
-  <circle cx="425" cy="220" r="13" fill="#00e5a0"/>
+  <circle cx="362" cy="222" r="20" fill="#26262f" stroke="#00A8FF" stroke-width="3"/>
+  <circle cx="425" cy="160" r="13" fill="#00A8FF"/>
+  <circle cx="455" cy="190" r="13" fill="#00A8FF"/>
+  <circle cx="395" cy="190" r="13" fill="#00A8FF"/>
+  <circle cx="425" cy="220" r="13" fill="#00A8FF"/>
 </svg>

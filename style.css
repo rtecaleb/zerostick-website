@@ -170,7 +170,7 @@ h1,h2,h3,h4 { line-height: 1.15; }
   left: 0;
   background: #1e2430;
   border: 1px solid rgba(255,255,255,0.1);
-  border-top: 2px solid #00e5a0;
+  border-top: 2px solid #00A8FF;
   box-shadow: 0 16px 40px rgba(0,0,0,0.5);
   min-width: 220px;
   padding: 8px 0;
@@ -186,7 +186,7 @@ h1,h2,h3,h4 { line-height: 1.15; }
   transition: all 0.15s;
   border-left: 2px solid transparent;
 }
-.dropdown a:hover { color: #fff; background: rgba(255,255,255,0.05); border-left-color: #00e5a0; }
+.dropdown a:hover { color: #fff; background: rgba(255,255,255,0.05); border-left-color: #00A8FF; }
 .dropdown .drop-label {
   padding: 10px 20px 4px;
   font-size: 10px;
@@ -213,7 +213,7 @@ h1,h2,h3,h4 { line-height: 1.15; }
   align-items: center;
   gap: 6px;
   padding: 7px 16px;
-  background: #00e5a0;
+  background: #00A8FF;
   color: #0d1117 !important;
   font-size: 13px;
   font-weight: 700;
@@ -221,7 +221,7 @@ h1,h2,h3,h4 { line-height: 1.15; }
   white-space: nowrap;
   transition: background 0.15s;
 }
-.btn-support:hover { background: #00cc8e; color: #0d1117 !important; }
+.btn-support:hover { background: #0090E0; color: #0d1117 !important; }
 
 /* ── Hero Slider ── */
 .hero-slider { position: relative; overflow: hidden; background: #111; }
@@ -375,7 +375,7 @@ h1,h2,h3,h4 { line-height: 1.15; }
 .stars { color: #f5a623; letter-spacing: 2px; font-size: 18px; }
 
 /* ── Footer ── */
-.footer { background: var(--black); color: #fff; padding: 64px 0 32px; }
+footer, .footer { background: var(--black); color: #fff; padding: 64px 0 32px; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 56px; }
 .footer-logo img { height: 44px; width: auto; margin-bottom: 16px; filter: brightness(0) invert(1); }
 .footer-about { color: rgba(255,255,255,0.55); font-size: 14px; max-width: 280px; line-height: 1.7; }
