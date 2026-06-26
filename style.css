@@ -178,7 +178,7 @@ h1,h2,h3,h4 { line-height: 1.15; }
   transition: color 0.15s;
 }
 .nav-links > li > a:hover { color: #fff; }
-.nav-links > li > a .caret { font-size: 11px; opacity: 0.5; }
+.nav-links > li > a .caret { font-size: 11px; color: var(--accent); }
 
 /* Dropdown */
 .dropdown {

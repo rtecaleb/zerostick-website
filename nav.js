@@ -7,7 +7,7 @@
 
     <!-- ANNOUNCEMENT BAR -->
     <div class="announce-bar">
-      FREE SHIPPING ON ORDERS OVER $100 &nbsp;|&nbsp; USE CODE <strong>ZEROSTICK10</strong> FOR 10% OFF
+      EVERY CONTROLLER EQUIPPED WITH <strong>TMR TECHNOLOGY</strong> AND A <strong>5-YEAR STICK WARRANTY</strong>
     </div>
 
     <!-- TOP ROW: Logo | Search | Account + Cart -->
