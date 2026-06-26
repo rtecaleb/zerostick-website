@@ -9,7 +9,7 @@
     <div class="nav-top">
       <div class="nav-top-inner">
         <a class="nav-logo" href="/index.html">
-          <img src="/images/logo.png" alt="ZeroStick" />
+          <img src="/images/logo-white.png" alt="ZeroStick" />
         </a>
         <div class="nav-search">
           <span class="nav-search-icon">&#128269;</span>
@@ -82,7 +82,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="/index.html"><img src="/images/logo.png" alt="ZeroStick" style="height:40px;width:auto;margin-bottom:16px;filter:brightness(0) invert(1)" /></a>
+        <a href="/index.html"><img src="/images/logo-white.png" alt="ZeroStick" style="height:34px;width:auto;margin-bottom:16px" /></a>
         <p>High-performance modified controllers built for speed, precision, and durability. Starting with genuine first-party controllers, upgraded for competitors and everyday players alike.</p>
       </div>
       <div class="footer-col">
