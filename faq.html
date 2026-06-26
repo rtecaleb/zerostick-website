@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ — ZeroStick</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-q {
+      width: 100%; background: none; border: none; color: #fff;
+      font-size: 16px; font-weight: 600; text-align: left;
+      padding: 20px 0; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .faq-q:hover { color: var(--accent); }
+    .faq-a { display: none; padding: 0 0 20px; color: var(--text-muted); font-size: 15px; line-height: 1.7; }
+    .faq-item.open .faq-a { display: block; }
+    .faq-item.open .faq-q { color: var(--accent); }
+    .faq-arrow { font-size: 20px; transition: transform 0.2s; }
+    .faq-item.open .faq-arrow { transform: rotate(45deg); }
+  </style>
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <div class="page-header">
+    <div class="container">
+      <p class="section-title">Help</p>
+      <h1>Frequently Asked Questions</h1>
+      <p>Everything you need to know about ZeroStick controllers, orders, and modifications.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container" style="max-width:800px">
+
+      <p class="section-title" style="margin-bottom:20px">Orders & Shipping</p>
+      <div class="faq-item">
+        <button class="faq-q">How long does it take to receive my controller? <span class="faq-arrow">+</span></button>
+        <div class="faq-a">Custom builds typically take 8–10 business days in production, plus shipping. Pre-built controllers ship within 1–2 business days. You'll receive a tracking number as soon as your order ships.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you ship internationally? <span class="faq-arrow">+</span></button>
+        <div class="faq-a">Yes, we ship worldwide. International shipping times and costs vary by destination and are calculated at checkout.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can I track my order? <span class="faq-arrow">+</span></button>
+        <div class="faq-a">Yes. Once your order ships you'll receive a tracking number via email. You can also log into your account to check your order status at any time.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can I change or cancel my order after placing it? <span class="faq-arrow">+</span></button>
+        <div class="faq-a">Changes and cancellations can be requested within 24 hours of placing your order. After that, your build may already be in production. Contact us via the support page as soon as possible.</div>
+      </div>
+
+      <p class="section-title" style="margin:40px 0 20px">Controllers & Modifications</p>
+      <div class="faq-item">
+        <button class="faq-q">What controller do you start with? <span class="faq-arrow">+</span></button>
+        <div class="faq-a">We use genuine first-party Sony DualSense (PS5) controllers as our base. We never use third-party shells or knockoff hardware.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Will my ZeroStick work on PC? <span class="faq-arrow">+</span></button>
+        <div class="faq-a">Yes. Since we start with genuine DualSense controllers, they work on PC via USB or Bluetooth just like a standard DualSense would, with full compatibility across most games and launchers.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What is a Smart Trigger / Smart Bumper? <span class="faq-arrow">+</span></button>
+        <div class="faq-a">Smart Triggers and Bumpers replace the standard analog inputs with mouse-click style switches. This gives you a much shorter, crisper actuation point — faster inputs with no travel lag.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What does drift-resistant mean? <span class="faq-arrow">+</span></button>
+        <div class="faq-a">Drift-resistant thumbstick mechanisms use upgraded components that resist the wear-and-tear that causes stick drift in standard controllers. Our hall-effect option uses magnetic sensing with zero physical contact, meaning virtually no drift over time.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How do I remap the rear buttons? <span class="faq-arrow">+</span></button>
+        <div class="faq-a">Rear button remapping is done directly on the controller without any app or software. See our step-by-step <a href="ps5/remap.html" style="color:var(--accent)">Remap Instructions</a> page for a full guide.</div>
+      </div>
+
+      <p class="section-title" style="margin:40px 0 20px">Warranty & Returns</p>
+      <div class="faq-item">
+        <button class="faq-q">What is the warranty on a ZeroStick? <span class="faq-arrow">+</span></button>
+        <div class="faq-a">All ZeroStick controllers come with a [X]-month warranty covering defects in our modifications and workmanship. Physical damage and misuse are not covered. See our full <a href="services/warranty.html" style="color:var(--accent)">Warranty Policy</a>.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can I return my controller? <span class="faq-arrow">+</span></button>
+        <div class="faq-a">Custom-built controllers are made to order and are non-refundable unless there is a defect. Pre-built controllers may be returned within [X] days in original condition. See our <a href="services/returns.html" style="color:var(--accent)">Returns Policy</a> for full details.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">My controller has an issue — what do I do? <span class="faq-arrow">+</span></button>
+        <div class="faq-a">Contact us via the <a href="support.html" style="color:var(--accent)">Support page</a> and describe the issue. For hardware problems, we may ask you to send it in for inspection or repair. Our <a href="services/send-in.html" style="color:var(--accent)">Send-In Service</a> is available for repairs and upgrades.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section section-dark" style="text-align:center">
+    <div class="container">
+      <h2 class="section-heading" style="font-size:28px">Still Have Questions?</h2>
+      <p style="color:var(--text-muted);margin-bottom:28px">Our team is happy to help. Reach out and we'll get back to you within 1–2 business days.</p>
+      <a href="support.html" class="btn btn-primary">Contact Support</a>
+    </div>
+  </section>
+
+  <footer id="footer"></footer>
+  <script src="nav.js"></script>
+  <script>
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.parentElement.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>

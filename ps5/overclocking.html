@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overclocking — ZeroStick</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .step { display:flex; gap:24px; margin-bottom:32px; align-items:flex-start; }
+    .step-num { min-width:48px; height:48px; background:var(--blue); border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:900; font-size:18px; flex-shrink:0; }
+    .step-body h4 { font-weight:700; font-size:17px; margin-bottom:6px; }
+    .step-body p { color:var(--text-muted); font-size:15px; line-height:1.7; }
+  </style>
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <div class="page-header">
+    <div class="container">
+      <p class="section-title">PS5 · Info</p>
+      <h1>Overclocking</h1>
+      <p>Increase your controller's polling rate for lower latency and more responsive inputs.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container" style="max-width:800px">
+
+      <p class="section-title">What is Overclocking?</p>
+      <h2 class="section-heading">Faster Inputs, Lower Latency</h2>
+      <div class="divider"></div>
+      <p style="color:var(--text-muted);margin-bottom:16px">By default, the DualSense sends input data to your console or PC at 250Hz (every 4ms). Overclocking increases this to 1000Hz (every 1ms), meaning your button presses and stick movements are registered up to 4× faster.</p>
+      <p style="color:var(--text-muted);margin-bottom:40px">This is especially noticeable in fast-paced games where reaction time matters — shooters, fighting games, and competitive titles.</p>
+
+      <div class="grid-2" style="margin-bottom:48px">
+        <div class="card" style="text-align:center">
+          <p style="color:var(--text-muted);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px">Standard</p>
+          <p style="font-size:48px;font-weight:900;color:var(--text-muted)">250<span style="font-size:20px">Hz</span></p>
+          <p style="color:var(--text-muted);font-size:13px">4ms input delay</p>
+        </div>
+        <div class="card" style="text-align:center;border-color:var(--blue)">
+          <p style="color:var(--accent);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px">Overclocked</p>
+          <p style="font-size:48px;font-weight:900;color:var(--accent)">1000<span style="font-size:20px">Hz</span></p>
+          <p style="color:var(--text-muted);font-size:13px">1ms input delay</p>
+        </div>
+      </div>
+
+      <p class="section-title">How to Enable</p>
+      <h2 class="section-heading" style="font-size:28px">Overclocking Guide</h2>
+      <div class="divider"></div>
+
+      <div style="background:var(--card-bg);border:1px solid var(--border);border-radius:8px;padding:20px 24px;margin-bottom:36px">
+        <strong>Note:</strong> <span style="color:var(--text-muted)">Overclocking is only available when connected via USB. It is not active over Bluetooth. Make sure you're using a high-quality USB cable.</span>
+      </div>
+
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h4>Connect via USB</h4>
+          <p>Plug your ZeroStick into your PS5 or PC using the USB-C cable. Overclocking only works wired.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h4>Hold the Overclock Button</h4>
+          <p>Hold the dedicated overclock button (varies by build — refer to your build sheet) for 2 seconds. The light bar will turn <strong style="color:var(--accent)">blue</strong> to indicate overclocking is active.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h4>Confirm in Your System</h4>
+          <p>On PC, you can verify the polling rate using a free tool like HIDUSBF or Mouse Tester. On PS5, overclocking is active automatically when the light bar is blue.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h4>To Disable</h4>
+          <p>Hold the overclock button again for 2 seconds. The light bar will return to its standard color. The setting is not saved between power cycles — you must re-enable it each session.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer id="footer"></footer>
+  <script src="../nav.js"></script>
+</body>
+</html>
