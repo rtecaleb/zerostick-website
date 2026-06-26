@@ -8,7 +8,7 @@
   </div>
   <nav id="navbar">
     <div class="container nav-inner">
-      <a class="nav-logo" href="/index.html">ZERO<span>STICK</span></a>
+      <a class="nav-logo" href="/index.html"><img src="/images/logo.png" alt="ZeroStick" style="height:36px;width:auto;display:block" /></a>
       <ul class="nav-links">
 
         <li>
@@ -65,7 +65,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="nav-logo">ZERO<span style="color:var(--accent)">STICK</span></div>
+        <a href="/index.html"><img src="/images/logo.png" alt="ZeroStick" style="height:40px;width:auto;margin-bottom:16px;filter:brightness(0) invert(1)" /></a>
         <p>High-performance modified controllers built for speed, precision, and durability. Starting with genuine first-party controllers, upgraded for competitors and everyday players alike.</p>
       </div>
       <div class="footer-col">
